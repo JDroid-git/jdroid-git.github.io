@@ -1,7 +1,7 @@
 image: assets/img/smile.png
 username: Christoph Jabs
 description: creator of the Grape-Academic-Theme! Grape-Academic-Theme is a modification of the Grape-Theme by naye0ng, making it more suitable as an academic portfolio.
-webpage: https://chrjabs.github.io
+webpage: https://jdroid-git.github.io
 experience: # Remove for hiding the experience section
   - start: 2017-05-03
     end: 2018-05-06
