@@ -1,232 +1,188 @@
-# Grape-Academic-Theme
+# Agency Jekyll Theme
+[![RubyGems Downloads](https://img.shields.io/gem/dt/jekyll-agency?label=gem%20downloads)](https://rubygems.org/gems/jekyll-agency)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue)](/LICENSE.txt)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip_me-green?logo=paypal)](https://www.paypal.me/raviriley)
+[![template button](https://img.shields.io/badge/Generate_theme_from_template-2ea44f)][generate]
+[![Featured on Jekyll-Themes.com](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/agency-jekyll-theme/)
 
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" loading="lazy">
-</a>
+## Preview - click for live demo
 
----
+[![screenshot](/screenshot.PNG)][demo-page]
 
-![home](https://chrjabs.github.io/Grape-Academic-Theme/assets/img/portfolio.png)
+## Warning
 
-Welcome to Grape Academic Theme!
-This theme is based on [Grape Theme](https://github.com/naye0ng/Grape-Theme) and modifies it to be more directly applicable as an academic portfolio page.
-It can still include a blog, but that is optional.
+> :warning: **Notice for those using legacy Formspree contact forms:** :warning:
+>
+> Email-based forms are being [phased out](https://help.formspree.io/hc/en-us/articles/360056076314) by Formspree. [#11](https://github.com/raviriley/agency-jekyll-theme/pull/11) updated this theme to use the [new Formspree structure](https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam). Click [here](https://help.formspree.io/hc/en-us/articles/360056076314) for instructions on updating your site's form.
 
-[Demo](https://chrjabs.github.io/Grape-Academic-Theme)
+## About
 
-## Features
+This is the [Agency Bootstrap theme](https://startbootstrap.com/themes/agency/), converted to a gem-based Jekyll theme with GitHub Pages support.
 
-Some of these features are optional and can be turned on or off in the `_config.yml` file.
+While this has been done before, [here](https://github.com/y7kim/agency-jekyll-theme), [here](https://github.com/SotiriosVrachas/jekyll-theme-startbootstrap-agency), and [here](https://github.com/laklau/agency-jekyll-theme/), these are outdated and have not been updated or maintained for years. I built this theme from the most recent Bootstrap source.
 
-### [Portfolio Homepage](https://chrjabs.github.io/Grape-Academic-Theme)
+I also added a lot of new features that go beyond the original theme's capabilities:
 
-Portfolio page giving an overview of your research.
+- GitHub Pages support
+- [template repo][template] to get up and running in minutes
+- contact form functionality powered by [Formspree.io](https://formspree.io)
+- multiple language support (currently English, Spanish, & German)
+- custom pages
+- 404 page
+- legal/Privacy Policy page
+- Google Analytics support
+- Markdown support
+- custom images
+- logo support (instead of just title text)
+- automatically updating copyright years
+- custom navigation bar, even without the header image(s)
+- customizable footer
+- custom accent color and dark/light colors
+- horizontal scrolling support for client section
+<!--
+- custom colors with automatic gradient generation (coming soon)
+- site title logo text font customization (coming soon)
+- horizontal scrolling support for portfolio section (coming soon)
+- about section (different from the timeline) -->
 
-### [Publications List](https://chrjabs.github.io/Grape-Academic-Theme/publications)
+The Jekyll structure of this theme includes:
 
-A optional list of your publications auto-generated from a BibTeX file.
-Additional information can be linked to from the BibTeX file.
+- `_portfolio` files - what generate the portfolio grid. YAML front matter handles all the details
+- the `page` layout allows custom pages, as seen in the legal and 404 pages
+- `sitetext.yml` enables complete customization of all site text
+- `navigation.yml` enables fully customizable navigation
+- `style.yml` enables fully customizable colors, background images, and other style-related things
 
-### [Presentations List](https://chrjabs.github.io/Grape-Academic-Theme/presentations)
+**If you enjoy this theme, please consider [supporting me](https://www.paypal.me/raviriley) to continue developing and maintaining it.**
 
-A optional list of your presentations auto-generated for a data file.
+<div align="center">
 
-### [Blog](https://chrjabs.github.io/Grape-Academic-Theme/blog)
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/raviriley)
 
-An optional blog for any posts you want to publish.
+</div>
 
-### [Hub Pages](https://chrjabs.github.io/Grape-Academic-Theme/example-hub)
+## Installation
 
-Hub pages are intended for easy linking in your presentations.
-They collect links and additional information related to your presentation so that you only have to put one link on your slides.
-They can be manually generated or automatically from one of your publication entries.
+There are three ways to install this theme:
 
-## Installation and Serving Local Version for Testing
+1. As a gem-based theme
+2. Use the [starter template][template] (best for GitHub Pages)
+3. As a remote theme
 
-1. Fork and clone the Grape Academic Theme repo
+#### 1. Gem-based Theme Installation
 
-   ```
-   git clone https://github.com/chrjabs/Grape-Academic-Theme.git
-   ```
+Replace the contents of your `_config.yml` file with the sample [\_config.yml](https://raw.githubusercontent.com/raviriley/agency-jekyll-theme/master/_config.yml).
 
-2. Install Jekyll 
+Install the gem with:
 
-   ```
-   gem install jekyll
-   ```
-
-3. Install the theme's dependencies
-
-   ```
-   bundle install
-   ```
-
-4. Update `_config.yml`, `_data/projects.yml`, `_data/projects.yml` and `_bibliography/publications.bib` with your own settings.
-
-5. Run the Jekyll server
-
-   ```
-   bundle exec jekyll serve
-   ```
-
-## Publishing
-
-Grape-Academic-Theme uses jekyll-scholar and therefore needs to manually be published to GitHub pages.
-A script for publishing on a `gh-pages` branch is included.
-Run `_scripts/publish.sh` from the main project directory and the page will be built, copied to the `gh-pages` branch and published.
-Make sure that GitHub pages is set up to publish that branch.
-If additional scripts should be executed in the HTML root, they can be placed in `_scripts/publish.d` and will be automatically executed.
-
-These are step-by-step instructions for forking and publishing the theme at your `<username>.github.io` github pages website:
-
-1. For the repository to a repository named `<username>/<username>.github.io`
-2. Go to the settings of the new repository and navigate to the "Pages" tab.
-  There, change the source for github pages to the `gh-pages` branch of the repository.
-3. Clone the repository and go through the installation steps listed above
-4. In `_config.yml`, change the `baseurl` option to an empty string (`""`) to host the webpage in the root of your `github.io` page
-5. Commit the change and (with a working jekyll install) run `_scripts/publish.sh`
-6. _Wait a couple of minutes_ and the demo content will show up at `<username>.github.io`
-
-## Customizing
-
-Grape-Theme has two great features: the profile section and the project section of the portfolio page. Just by changing `_config.yml` and `projects.yml`, you can use all of these features.
-
-### Feature Settings
-
-The blog, publications, and presentations pages are optional and can be turned on or off in the config file.
-
-### Favicon
-
-Generate your favicons with [realfavicongenerator.net](https://realfavicongenerator.net/) and place them in the root directory.
-The code to include them is already set up in the template.
-
-### Site configuration
-
-```
-baseurl: "{subpath}"
-
-theme_settings :
-  title: {blog title}
+```sh
+$ bundle add jekyll-agency
 ```
 
-### Profile Settings
+Or manually.
 
-Profile is displayed on the index page, and also experience and skills are displayed on the portfolio page.
-The profile is configured in `_data/profile.yml`.
-
-```
-image: assets/img/smile.png
-username: Christoph Jabs
-description: creator of the Grape-Academic-Theme! Grape-Academic-Theme is a modification of the Grape-Theme by naye0ng, making it more suitable as an academic portfolio.
-webpage: https://chrjabs.github.io
-experience:
-  - start: 2017-05-03
-    end: 2018-05-06
-    experience : company name, title
-interests:
-  - Interest 1
-  - Interest 2
-skills: 
-  - skill: HTML5 & CSS
-    value: 85  # Percent value
-```
-
-### Presentations
-
-The data for the presentations page can be defined in `data/presentations.yml`.
-
-```
-- presentation:
-    title: A nice presentation
-    event: Fancy conference
-    date: 05/2022
-    comment: This is some comment text that can do _Markdown_
-    slides: https://www.google.com # potential link to slides
-- presentation:
-    title: A second presentation
-    event: Another conference
-    date: 03/2022
-```
-
-### Hub Pages
-
-For an example on how to configure a hub page, see the `example-hub.md` file.
-
-### Pagination
-
-Defines the number of posts to be shown on one page.
-
-```
-paginate: 5
-```
-
-### Portfolio Settings
-
-![home](https://chrjabs.github.io/Grape-Academic-Theme/assets/img/portfolio.png)
-
-The Project configuration is available in `_data/projects.yml`.
-
-The portfolio page provides projects and detailed views by modal.
-If `modal : False` is selected, modal will not be displayed on site. 
-
-- **print** : 
-  
-  - If `print: True` is selected, it will be displayed on landing page
-  
-- **modal** 
-  
-  - If `modal: True` is selected, modal will be displayed on the Portfolio page
-  
-    ![home](https://chrjabs.github.io/Grape-Academic-Theme/assets/img/modal.png)
-
-```
-print: True
-modal: True  
-```
-
-Add details(link, description) about your projects
-
-```
-url: https://github.com/naye0ng/Grape-Theme # Full URL
-image: "portfolio.png" # path: assets/project/
-date: 2019.06.09 - 2019.07.11
-title: 
-summary: 
-description:  
-# modal contents
-contents:
-  - title:
-    image:      	    
-    description: 
-```
-
-### Colors
-
-You can change colors at once. colors are in `_sass/base/_variable.scss`
-
-## Posts in Grape theme
-
-You can confirm how to draw tags at [here](https://grape-theme.netlify.com/2019/06/08/markdown-and-html.html) and [here](https://grape-theme.netlify.com/2019/06/09/grape-theme-style.html)
-
-### Create a new post
-
-1. Create a `.md` inside `_posts` folder
+1. Add this line to your Jekyll site's `Gemfile`:
+   ```ruby
+   gem "jekyll-agency"
    ```
-   2019-07-11-grape-theme.md
+2. Then execute:
+   ```sh
+   $ bundle install
    ```
 
-2. Write the [Front Matter](https://jekyllrb.com/docs/front-matter/) and content in the file.
-   ```
-   ---
-   layout: post
-   title: title
-   subtitle : subtitle
-   tags: [tag1, tag2]
-   author: 
-   comments : 
-   ---
-   ```
+#### 2. Using the [Starter Template][template]
 
-## Licence
+This is the fastest and easiest way to get up and running on GitHub Pages.
 
-The theme is available as open source under the terms of the [MIT Licence](https://opensource.org/licenses/MIT).
+Simply generate your own repository by clicking the button below. Then replace the sample content with your own and configure for your needs.
+
+<div align="center">
+
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)][generate]
+
+</div>
+    
+#### 3. Remote Theme Installation
+
+Replace your `_config.yml` file with the starter [\_config.yml](https://raw.githubusercontent.com/raviriley/agency-jekyll-theme-starter/master/_config.yml).
+
+Replace your `Gemfile` with the starter [Gemfile](https://raw.githubusercontent.com/raviriley/agency-jekyll-theme-starter/master/Gemfile).
+
+Then install gems.
+
+```sh
+$ bundle install
+```
+
+<!--
+## Documentation and Usage
+
+**TODO:** Write usage instructions here. Describe available layouts, includes, or assets.
+
+navheader is used only for the home page. nav is used everywhere else.
+
+Layouts:
+
+Includes:
+
+-->
+
+## Contributing
+
+This project is intended to be a welcoming space for collaboration. If you have an idea, suggestion, feature request, etc., feel free to open an issue or pull request.
+
+For bug reports, follow the provided template.
+
+#### Improvements - Up for Grabs
+
+- [x] multiple language support thanks to [@rbenitezpagan](https://github.com/rbenitezpagan)
+  - [x] Spanish thanks to [@rbenitezpagan](https://github.com/rbenitezpagan)
+  - [x] German thanks to [@bkfirmen](https://github.com/bkfirmen)
+  - [ ] Chinese
+  - [ ] Arabic
+  - [ ] etc
+- [ ] customizable background coloring for each section
+
+## Development
+
+To set up your environment to develop this theme, clone this repo or your fork.
+
+```sh
+$ git clone https://github.com/raviriley/agency-jekyll-theme.git
+$ cd agency-jekyll-theme
+```
+
+Then run:
+
+```sh
+$ bundle install
+```
+
+To test the theme, run this. (Using the `--trace` flag for verbose errors.)
+
+```sh
+$ bundle exec jekyll serve --trace
+```
+
+Then open your browser at:
+
+- http://localhost:4000
+
+Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+<!--
+
+## Example Implementations
+
+- [CV Enterprises](https://cventerprises.org)
+- [Mortazavi Lab at UC Irvine](https://mortazavilab.github.io/)
+
+-->
+
+[demo-page]: https://raviriley.github.io/agency-jekyll-theme-starter/
+[template]: https://github.com/raviriley/agency-jekyll-theme-starter
+[generate]: https://github.com/raviriley/agency-jekyll-theme-starter/generate

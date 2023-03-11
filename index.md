@@ -1,5 +1,3 @@
 ---
-layout: portfolio
-title : Portfolio
-description: Personal portfolio
+layout: home
 ---
