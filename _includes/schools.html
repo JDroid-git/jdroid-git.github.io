@@ -1,0 +1,61 @@
+<!-- schools -->
+<section class="page-section" id="{{ site.data.sitetext[site.locale].schools.section | default: 'schools' }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="schools-title">
+          <img src="{{ site.data.sitetext[site.locale].schools.icon }}" width="40px" height="40px" />
+          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].schools.title | default:"Schools" }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="schools">
+          {%- assign align = site.data.sitetext[site.locale].schools.start_align -%}
+          {%- for event in site.data.sitetext[site.locale].schools.events -%}
+          {%- if align == "right" -%}
+          {%- if event.align and event.align == "left" -%}
+          {%- assign align = "right" -%}
+          <li>
+            {%- else -%}
+            {%- assign align = "left" %}
+          <li class="schools-inverted">
+            {% endif %}
+            {% else %}
+            {%- if event.align and event.align == "right" -%}
+            {%- assign align = "left" -%}
+          <li class="schools-inverted">
+            {%- else -%}
+            {%- assign align = "right" %}
+          <li>
+            {% endif %}
+            {%- endif -%}
+            <div class="schools-image">
+              <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+            </div>
+            <div class="schools-panel">
+              <div class="schools-heading">
+                <h4>{{ event.year | markdownify }}</h4>
+                <h4 class="subheading">{{ event.title }}</h4>
+              </div>
+              <div class="schools-body">
+                <div class="text-muted">{{ event.desc | markdownify }}</div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+
+          {% if site.data.sitetext[site.locale].schools.end %}
+          <li class="schools-inverted">
+            <div class="schools-image">
+              <h4>{{ site.data.sitetext[site.locale].schools.end }}</h4>
+            </div>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About -->

@@ -1,0 +1,62 @@
+<!-- Career -->
+<section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].career.section | default: 'career' }}">
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="career-title">
+          <img src="{{ site.data.sitetext[site.locale].career.icon }}" width="40px" height="40px" />
+          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].career.title | default:"Career" }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="career">
+          {%- assign align = site.data.sitetext[site.locale].career.start_align -%}
+          {%- for event in site.data.sitetext[site.locale].career.events -%}
+          {%- if align == "right" -%}
+          {%- if event.align and event.align == "left" -%}
+          {%- assign align = "right" -%}
+          <li>
+            {%- else -%}
+            {%- assign align = "left" %}
+          <li class="career-inverted">
+            {% endif %}
+            {% else %}
+            {%- if event.align and event.align == "right" -%}
+            {%- assign align = "left" -%}
+          <li class="career-inverted">
+            {%- else -%}
+            {%- assign align = "right" %}
+          <li>
+            {% endif %}
+            {%- endif -%}
+            <div class="career-image">
+              <img class="rounded-circle img-fluid" src="{{ event.image }}" width="80" height="150"/>
+            </div>
+            <div class="career-panel">
+              <div class="career-heading">
+                <h4>{{ event.year | markdownify }}</h4>
+                <h4 class="subheading">{{ event.title }}</h4>
+              </div>
+              <div class="career-body">
+                <div class="text-muted">{{ event.desc | markdownify }}</div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+
+          {% if site.data.sitetext[site.locale].career.end %}
+          <li class="career-inverted">
+            <div class="career-image">
+              <h4>{{ site.data.sitetext[site.locale].career.end }}</h4>
+            </div>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About -->
