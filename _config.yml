@@ -22,7 +22,7 @@ description: "안드로이드 개발자 노원진입니다!"
 author     : 노원진
 logo:     #optional, defaults to site title
   path: /assets/img/wonjin.png
-  height: 50 #height in px, defaults to 52px
+  height: 32px #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 

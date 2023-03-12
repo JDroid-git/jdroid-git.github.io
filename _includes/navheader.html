@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       {%- if site.logo -%}
-      <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" />
+      <img height="{{ site.logo.height | default: 52px }}" src="{{ site.logo.path }}" />
       {%- else -%}
       {{ site.title }}
       {%- endif -%}
@@ -55,10 +55,10 @@
         <img src="/assets/img/smile.png"></img>
         <div class="intro-text">
           {%- if site.data.sitetext[site.locale].header.title -%}
-          <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.title | markdownify }}
-          </div>
+          <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
           {%- endif -%}
           {%- if site.data.sitetext[site.locale].header.text -%}
+          <hr style="height: 2px; border: 1px; background-color: #e9ecef;" />
           <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
           {%- endif -%}
         </div>
@@ -80,8 +80,7 @@
 
       {%- if site.data.sitetext[site.locale].header.button -%}
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger button-more"
-        href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{
-        site.data.sitetext[site.locale].header.button }}</a>
+        href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{site.data.sitetext[site.locale].header.button }}</a>
       {%- endif -%}
     </div>
   </div>

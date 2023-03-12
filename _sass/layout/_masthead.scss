@@ -9,7 +9,7 @@ header.masthead {
   background-size: cover;
 
   .particles-js {
-    background-color: $gray-700;
+    background-color: $gray-800;
     padding-top: 100px;
 
     .particles-js-canvas-el {
@@ -34,20 +34,22 @@ header.masthead {
 
     .intro-text {
       padding-top: 50px;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
 
       .intro-heading {
-        font-size: 36px;
+        font-size: 26px;
         font-weight: 700;
-        line-height: 50px;
+        line-height: 26px;
         margin-bottom: 25px;
+        text-align: left;
         @include heading-font;
       }
 
       .intro-lead-in {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 16px;
         margin-bottom: 25px;
+        text-align: left;
         @include serif-font;
       }
     }
@@ -74,16 +76,16 @@ header.masthead {
         width: auto;
 
         .intro-heading {
-          font-size: 46px;
+          font-size: 32px;
           font-weight: 700;
-          line-height: 50px;
-          margin-bottom: 50px;
+          line-height: 32px;
+          margin-bottom: 20px;
           @include heading-font;
         }
 
         .intro-lead-in {
-          font-size: 32px;
-          line-height: 40px;
+          font-size: 18px;
+          line-height: 18px;
           margin-bottom: 25px;
           @include serif-font;
         }
@@ -130,4 +132,12 @@ a.button-more {
   margin-top: 60px;
   margin-bottom: 60px;
   z-index: 1;
+  background-color: transparent;
+  border-color: white;
+  border-width: 2px;
+  height: 50px;
+
+  display: inline-flex;
+  vertical-align: middle;
+  line-height: 10px;
 }

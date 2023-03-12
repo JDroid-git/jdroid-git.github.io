@@ -18,7 +18,7 @@ en: &DEFAULT_EN
     social:
       - url: mailto:wonjin2168@gmail.com
         icon: "fa fa-envelope"
-      - url: https://linkedin.com
+      - url: https://linkedin.com/in/원진-노-84b098244
         icon: "fab fa-linkedin-in"
       - url: https://github.com/jdroid-git
         icon: "fab fa-github"
