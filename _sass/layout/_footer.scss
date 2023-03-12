@@ -1,6 +1,8 @@
 // Styling for the footer
-.footer {
+.footer-items {
   padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   span.copyright {
     font-size: 90%;

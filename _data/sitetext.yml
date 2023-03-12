@@ -22,6 +22,8 @@ en: &DEFAULT_EN
         icon: "fab fa-linkedin-in"
       - url: https://github.com/jdroid-git
         icon: "fab fa-github"
+      - url: https://jdroid.tistory.com
+        icon: "fa fa-blog"
 
   skills:
     title: "기술"
@@ -37,6 +39,9 @@ en: &DEFAULT_EN
       - title: "Python"
         desc: "Python의 다양한 라이브러리 TensorFlow, FastApi, PyQt 등을 사용한 경험이 있습니다."
         icon: https://img.icons8.com/color/96/null/python--v1.png
+      - title: "Git"
+        desc: "Github, Gitlab을 이용하여 프로젝트 버전 관리, 팀 협업 경험이 있습니다."
+        icon: https://img.icons8.com/nolan/512/git.png
 
   career:
     title: "경력"
@@ -52,13 +57,13 @@ en: &DEFAULT_EN
     section: schools
     icon: https://img.icons8.com/external-flat-satawat-anukul/64/null/external-school-education-flat-flat-satawat-anukul.png
     events:
-      - title: "대구대학교, 컴퓨터IT과 (학사)"
+      - title: "대구대학교, 컴퓨터IT과<br>(학사)"
         year: "중퇴"
         image: /assets/img/schools/daegu.png
-      - title: "한국 폴리텍대학교, IT 융합과 (전문학사)"
+      - title: "한국 폴리텍대학교, IT 융합과<br>(전문학사)"
         year: "2020.03 - 2022.02"
         image: /assets/img/schools/polytech.png
-      - title: "학점은행제, 컴퓨터공학과 (학사)"
+      - title: "학점은행제, 컴퓨터공학과<br>(학사)"
         year: "2022.08 - 2023.02"
         image: /assets/img/schools/cb.png
 

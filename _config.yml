@@ -16,7 +16,7 @@ theme: jekyll-agency
 url    : "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : wonjin
+title      : 노원진
 email      : wonjin2168@gmail.com
 description: "안드로이드 개발자 노원진입니다!"
 author     : 노원진
